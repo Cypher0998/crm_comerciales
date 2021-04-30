@@ -1,0 +1,204 @@
+.o_main, .o_main_content, .o_content {
+    width: 100%;
+    height: 100%;
+}
+
+.o_content{
+    > div{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#contenedorBackGround{
+  overflow: hidden;
+  margin:0;
+  padding: 0;
+  max-height: 1920px;
+}
+
+
+.o_totem_definitivo_totem_mode_text_header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#headerTotem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: -16px;
+
+}
+
+#leftArrow{
+  height:50px;
+  width:50px;
+}
+
+#rightArrow{
+  height:50px;
+  width:50px;
+}
+
+.buttons{
+  border-color: transparent;
+  text-align:center;
+  background-color: transparent;
+}
+.botonera{
+  text-align: center;
+}
+.o_totem_definitivo_totem_mode_left_side{
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o_totem_definitivo_totem_mode_right_side{
+ background-color: transparent;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title{
+  font-size: 64px;
+  text-align: center;
+  color:white;
+}
+
+.descriptionContent{
+  padding-top: 50px;
+}
+.description{
+  color : black;
+  font-size: x-large;
+  padding: 15px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+#slideshowContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#slideshow{
+  text-align: center;
+}
+#imagenSlider{
+  background-color: transparent;
+}
+
+
+.o_totem_definitivo_totem_mode_footer{
+  display: flex;
+  justify-content:space-between;
+  width:100%;
+}
+#footerText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footerContent{
+
+  text-align:center;
+  color : white;
+  font-size: xx-large;
+}
+#QRFooterContainer{
+    width: 132px;
+    height: 132px;
+    overflow: hidden;
+    margin:0px;
+    position: relative;
+}
+
+#crossImg{
+  height:100%;
+  width:100%;
+}
+#closeButton{
+  position:absolute;
+  right:5px;
+  top:0; 
+  text-align:right;
+  border-color: transparent;
+  background-color: transparent;
+  height:5%;
+  width:5%;
+}
+
+/* Estilos de modal */
+
+#template1_pop_up {
+    background: #d5d4c3 !important;
+    border: 1.5px solid grey;
+}
+
+.modal-header{
+  position:relative;
+  display: flex;
+  align-items: right;
+  text-align:right;
+}
+.modal-title{
+  right:20px;
+}
+.modal-body {
+  position:relative;
+}
+
+.modal-perl .modal-backdrop{
+   background-color: #d5d4c3 ;
+}
+#descriptionPopUp{
+  position:absolute;
+  right:20px;
+}
+
+#QrPopUp{
+  margin-right:1%;
+  margin-top:5%;
+}
+
+#cancelarContenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cancelarButton{
+  text-align:center;
+  width:100px;
+}
+#QRBannerContainer{
+  position: absolute;
+  top:0;
+  margin-top:31.5vh;  
+}
+
+.QRVideoContainer{
+  position: absolute;
+  top:0;
+  margin-top:18vh; 
+}
+#BannerContent{
+  position:relative;
+}
+.BannerPush{
+  position: absolute;
+  background: transparent;
+  top:0;
+  z-index: 1;
+}
+
+#VideoContent{
+  position: relative;
+}
+#RssContent{
+  position: relative;
+}
+
