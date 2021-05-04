@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="base.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('settings')]" position="inside">
-                <div class="app_settings_block" data-string="Totem" string="Totem" data-key="totem_definitivo">
+                <div class="app_settings_block" data-string="CRM Comerciales" string="CRM Comerciales" data-key="crm_comerciales">
                     <h1>Configuración</h1>
                         <h2>Pie de página</h2>
                             <div class="row mt16 o_settings_container">
@@ -47,7 +47,7 @@
 
                                     <label for="pop_up_time"/>
                                     <div class="text-muted">
-                                        Por defecto => 20 segundos.
+                                        Por defecto => 35 segundos.
                                     </div>
                                     <field name="pop_up_time"/>
                                 </div>
@@ -97,12 +97,12 @@
         <field name="view_id" ref="res_config_settings_view_form"/>
         <field name="view_mode">form</field>
         <field name="target">inline</field>
-        <field name="context">{'module' : 'totem_definitivo'}</field>
+        <field name="context">{'module' : 'crm_comerciales'}</field>
     </record> 
 
     <menuitem id="menu_sale_general_settings"
-        name="Configuraciones del Totem"
-        parent="event.menu_event_configuration"
+        name="Configuración"
+        parent="main_menu"
         action="action_events_config_settings"/>
 
 </odoo>

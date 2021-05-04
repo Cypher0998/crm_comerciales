@@ -1,14 +1,14 @@
 <odoo>
-	<record model="ir.actions.client" id="totem_definitivo_action_totem_mode">
+	<record model="ir.actions.client" id="crm_action_comercial_mode">
 		<field name="name">fullScreen</field>
-		<field name="tag">totem_definitivo_totem</field>
+		<field name="tag">totem_prueba_totem</field>
 		<field name="target">fullscreen</field>
 	</record>
 
 	<menuitem 
-		id="modo_totem" 
+		id="modo_comercial" 
 		name="Pantalla Completa" 
 		parent="main_menu"
-		action="totem_definitivo_action_totem_mode"/>
+		action="crm_action_comercial_mode"/>
 
 </odoo>
