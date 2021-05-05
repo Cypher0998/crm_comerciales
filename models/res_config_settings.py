@@ -2,10 +2,6 @@
 
 from odoo import api, models, fields, _, exceptions
 
-
-from . import utilities
-
-
 class ResConfigSettings(models.TransientModel):
 	_inherit = 'res.config.settings'
 

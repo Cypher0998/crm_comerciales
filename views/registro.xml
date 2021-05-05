@@ -1,0 +1,53 @@
+<odoo>
+
+  <!-- treeview curso -->
+  <record model="ir.ui.view" id="view_registro_id">
+    <field name="name">registro.tree</field>
+    <field name="model">registro.registro</field>
+    <field name="priority" eval="16"/>
+    <field name="arch" type="xml">
+      <tree string="Lista de registros">
+        <field name="initial_date"/>
+        <field name="final_date"/>
+        <field name="visit_type"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- formulario para ls imágenes -->
+  <record model="ir.ui.view" id="view_id_registro_form">
+    <field name="name">registro.form</field>
+    <field name="model">registro.registro</field>
+    <field name="priority" eval="16"/>
+    <field name="arch" type="xml">
+      <form string="Registro de visitas">
+        <sheet>
+          <group>
+            <field name="visit_type"/>
+            <field name="initial_date"/>
+            <field name="final_date"/>
+          </group>
+          <notebook>
+            <page string="Clientes Visitados">
+              <label for="visited_client"/>
+              <field name="visited_client"/>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+<!-- vista del CRM Comerciales -->
+  <record model="ir.actions.act_window" id="registro_action">
+    <field name="name">Registro de visitas</field>
+    <field name="res_model">registro.registro</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="main_menu" name="CRM Comerciales" 
+    web_icon="crm_comerciales,static/description/icon.png"
+    action="registro_action"
+    />
+</odoo>	

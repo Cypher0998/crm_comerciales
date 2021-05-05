@@ -1,16 +1,18 @@
 <odoo>
-<!-- vista del totem -->
+<!-- vista del CRM Comerciales -->
   <record model="ir.actions.act_window" id="clientes_action">
     <field name="name">Vista de Pantallas</field>
     <field name="res_model">res.partner</field>
     <field name="view_type">form</field>
     <field name="view_mode">form</field>
-    <field name="help" type="html">
-      <p class="o_view_nocontent_smiling-face">No hay títulos</p>
-    </field>
   </record>
-  <!-- insercion de icono en la barra lateral -->
-  <menuitem id="main_menu" name="CRM Comerciales" 
-    web_icon="crm_comerciales,static/description/icon.png"
-    action="clientes_action"/>
+
+  <menuitem id="clientes_menu" 
+            name="Clientes"
+            parent="main_menu"/>
+
+  <menuitem id="crear_clientes"
+            name="Nuevo Cliente" 
+            parent="clientes_menu" 
+            action="clientes_action"/>
 </odoo>	

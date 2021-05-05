@@ -25,11 +25,13 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/registro.xml',
         'views/clientes.xml',
         #'views/res_config_settings_views.xml',
         # 'views/views.xml',
         #'views/templates.xml',
         'views/full_screen.xml'
+        
     ],
     # only loaded in demonstration mode
     'demo': [
