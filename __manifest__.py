@@ -21,7 +21,6 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base','base_setup','website'],
-
     # always loaded
     'data': [
         'security/ir.model.access.csv',
@@ -29,7 +28,7 @@
         'views/clientes.xml',
         #'views/res_config_settings_views.xml',
         # 'views/views.xml',
-        #'views/templates.xml',
+        'views/templates.xml',
         'views/full_screen.xml'
         
     ],
@@ -37,7 +36,7 @@
     'demo': [
         'demo/demo.xml',
     ],
-    #'qweb': [
-     #   "static/src/xml/totem.xml",
-    #],
+    'qweb': [
+         "static/src/xml/modoComercial.xml",
+    ],
 }

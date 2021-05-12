@@ -1,53 +1,59 @@
 <odoo>
+    <!-- treeview para registro de visitas -->
+    <record model="ir.ui.view" id="view_registro_id">
+      <field name="name">registro.tree</field>
+      <field name="model">registro.registro</field>
+      <field name="priority" eval="16"/>
+      <field name="arch" type="xml">
+        <tree string="Lista de registros">
+          <field name="employee"/>
+          <field name="initial_date"/>
+          <field name="final_date"/>
+          <field name="visit_type"/>
+          <field name="visited_client"/>
+        </tree>
+      </field>
+    </record>
 
-  <!-- treeview curso -->
-  <record model="ir.ui.view" id="view_registro_id">
-    <field name="name">registro.tree</field>
-    <field name="model">registro.registro</field>
-    <field name="priority" eval="16"/>
-    <field name="arch" type="xml">
-      <tree string="Lista de registros">
-        <field name="initial_date"/>
-        <field name="final_date"/>
-        <field name="visit_type"/>
-      </tree>
-    </field>
-  </record>
+    <!-- formulario para el registro de visitas -->
+    <record model="ir.ui.view" id="view_id_registro_form">
+      <field name="name">registro.form</field>
+      <field name="model">registro.registro</field>
+      <field name="priority" eval="16"/>
+      <field name="arch" type="xml">
+          <form string="Registro de visitas" id="prueba">
+            <sheet>
+              <group>
+                <field name="visit_type" required="1"/>
+                <field name="visited_client" required="1"/>
+                <field name="initial_date" readonly="1"/>
+                <field name="final_date" readonly="1"/>
+                <field name="geo_lat" readonly="1" id="latitud"/>
+                <field name="geo_long" readonly="1" id="longitud"/>
+                <field name="visitado" invisible="1"/>
+                <field name="visita_terminada" invisible="1"/>
+              </group>
+              <group attrs="{'invisible':[('visitado','=',True)]}">
+                <button string="Inicio de visita" type="object" name="check_date_in" class="oe_right oe_highlight" id="inicioVisita"/>
+              </group>
+              <group attrs="{'invisible':['|',('visita_terminada','=',True), ('visitado','=',False)]}">
+                <button string="Finalizar visita" type="object" name="check_date_out" class="oe_right oe_highlight"/>
+              </group>
+            </sheet>
+          </form>
+      </field>
+    </record>
 
-  <!-- formulario para ls imágenes -->
-  <record model="ir.ui.view" id="view_id_registro_form">
-    <field name="name">registro.form</field>
-    <field name="model">registro.registro</field>
-    <field name="priority" eval="16"/>
-    <field name="arch" type="xml">
-      <form string="Registro de visitas">
-        <sheet>
-          <group>
-            <field name="visit_type"/>
-            <field name="initial_date"/>
-            <field name="final_date"/>
-          </group>
-          <notebook>
-            <page string="Clientes Visitados">
-              <label for="visited_client"/>
-              <field name="visited_client"/>
-            </page>
-          </notebook>
-        </sheet>
-      </form>
-    </field>
-  </record>
+  <!-- vista del CRM Comerciales -->
+    <record model="ir.actions.act_window" id="registro_action">
+      <field name="name">Registro de visitas</field>
+      <field name="res_model">registro.registro</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
-<!-- vista del CRM Comerciales -->
-  <record model="ir.actions.act_window" id="registro_action">
-    <field name="name">Registro de visitas</field>
-    <field name="res_model">registro.registro</field>
-    <field name="view_type">form</field>
-    <field name="view_mode">tree,form</field>
-  </record>
-
-  <menuitem id="main_menu" name="CRM Comerciales" 
-    web_icon="crm_comerciales,static/description/icon.png"
-    action="registro_action"
+    <menuitem id="main_menu" name="CRM Comerciales" 
+      web_icon="crm_comerciales,static/description/icon.png"
+      action="registro_action"
     />
 </odoo>	

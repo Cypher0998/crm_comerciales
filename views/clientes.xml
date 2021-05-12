@@ -1,5 +1,5 @@
 <odoo>
-<!-- vista del CRM Comerciales -->
+<!-- vista del Formulario de añadir clientes -->
   <record model="ir.actions.act_window" id="clientes_action">
     <field name="name">Vista de Pantallas</field>
     <field name="res_model">res.partner</field>
@@ -8,11 +8,7 @@
   </record>
 
   <menuitem id="clientes_menu" 
-            name="Clientes"
-            parent="main_menu"/>
-
-  <menuitem id="crear_clientes"
-            name="Nuevo Cliente" 
-            parent="clientes_menu" 
-            action="clientes_action"/>
+            name="Añadir clientes"
+            parent="main_menu"
+            action="clientes_action"/>            
 </odoo>	
